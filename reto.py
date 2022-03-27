@@ -5,9 +5,6 @@
 # y saber cual numero es divicible
 
 
-from ctypes.wintypes import INT
-
-
 def potencia(base, exponente_final,exponente_inicial, resultado,resultados):
     while exponente_inicial <= exponente_final :
         print(resultado)
@@ -41,7 +38,7 @@ en el programa se te pedira un numero base y una base)
     if preguntar_si(respuesta):
         multiplo=int(input("señor usuario escriba el numero que escriba el numero que sea saber sus multiplos: "))
         potencia(base, exponente_final,exponente_inicial, resultado,resultados)
-        print(for i in resultados%multiplo!=0:  in resultados)
+        
                
     else:
         potencia(base, exponente_final,exponente_inicial, resultado,resultados)
