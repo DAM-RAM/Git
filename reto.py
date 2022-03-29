@@ -38,8 +38,16 @@ en el programa se te pedira un numero base y una base)
     if preguntar_si(respuesta):
         multiplo=int(input("señor usuario escriba el numero que escriba el numero que sea saber sus multiplos: "))
         potencia(base, exponente_final,exponente_inicial, resultado,resultados)
-        str(resultados)=resultados
-               
+        resultados_letras=str(resultados)
+        resultados_numeros=int(resultados_letras)
+        for i in resultados_numeros:
+            if i % multiplo != 0:
+                continue
+            print(i)
+
+            
+
+
     else:
         potencia(base, exponente_final,exponente_inicial, resultado,resultados)
 
