@@ -5,12 +5,13 @@
 # y saber cual numero es divicible
 
 
-def potencia(base, exponente_final,exponente_inicial, resultado,resultados):
+def potencia(base, exponente_final,exponente_inicial, resultado,resultados,multiplo):
     while exponente_inicial <= exponente_final :
-        print(resultado)
-        resultados.append(resultado)
         exponente_inicial= exponente_inicial + 1
         resultado = base ** exponente_inicial
+        if resultado % multiplo ==0:
+            resultados.append(resultado)
+    print(resultados)
 
 def preguntar_si(respuesta):
     respuesta= respuesta.replace(" ","").lower()
@@ -37,22 +38,14 @@ en el programa se te pedira un numero base y una base)
     preguntar_si(respuesta)
     if preguntar_si(respuesta):
         multiplo=int(input("señor usuario escriba el numero que escriba el numero que sea saber sus multiplos: "))
-        potencia(base, exponente_final,exponente_inicial, resultado,resultados)
-        resultados_letras=str(resultados)
-        resultados_numeros=int(resultados_letras)
-        for i in resultados_numeros:
-            if i % multiplo != 0:
-                continue
-            print(i)
-
-            
-
-
+        potencia(base, exponente_final,exponente_inicial, resultado,resultados,multiplo)
+    
+               
     else:
-        potencia(base, exponente_final,exponente_inicial, resultado,resultados)
+        multiplo=1
+        potencia(base, exponente_final,exponente_inicial, resultado,resultados,multiplo)
 
     
-#almacen=(str(potencia(base, exponente_final,exponente_inicial, resultado))[::])
     
     
 if __name__ == "__main__" :
